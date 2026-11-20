@@ -1,0 +1,377 @@
+{
+  "title": "Test CI",
+  "description": "Prototipo navigabile per organizzare le prenotazioni allo sportello anagrafe, consultare il calendario settimanale e aggiornare lo stato degli appuntamenti. Dati e nomi interamente inventati.",
+  "accent": "indigo",
+  "pages": [
+    {
+      "id": "riepilogo",
+      "title": "Riepilogo",
+      "description": "Panoramica degli appuntamenti della settimana e disponibilità degli sportelli. Filtri consultabili per giorno e stato.",
+      "metrics": [
+        {
+          "label": "Appuntamenti settimana",
+          "value": "24"
+        },
+        {
+          "label": "Slot liberi settimana",
+          "value": "36"
+        },
+        {
+          "label": "Slot occupati settimana",
+          "value": "24"
+        },
+        {
+          "label": "Presentati oggi",
+          "value": "3"
+        },
+        {
+          "label": "Assenti oggi",
+          "value": "1"
+        }
+      ],
+      "columns": [
+        "Giorno",
+        "Orario",
+        "Cognome",
+        "Nome",
+        "Motivo",
+        "Stato"
+      ],
+      "rows": [
+        [
+          "Lunedì",
+          "09:00",
+          "Lumo",
+          "Vela",
+          "Rilascio carta d’identità",
+          "Prenotato"
+        ],
+        [
+          "Lunedì",
+          "09:20",
+          "Nubi",
+          "Riva",
+          "Rinnovo carta d’identità",
+          "Presentato"
+        ],
+        [
+          "Martedì",
+          "10:00",
+          "Mira",
+          "Sole",
+          "Rilascio carta d’identità",
+          "Prenotato"
+        ],
+        [
+          "Mercoledì",
+          "11:20",
+          "Timo",
+          "Luce",
+          "Rinnovo carta d’identità",
+          "Assente"
+        ],
+        [
+          "Venerdì",
+          "14:00",
+          "Duna",
+          "Nilo",
+          "Rilascio carta d’identità",
+          "Prenotato"
+        ]
+      ],
+      "form": []
+    },
+    {
+      "id": "calendario-settimanale",
+      "title": "Calendario settimanale",
+      "description": "Consulta le fasce di 20 minuti e filtra gli slot per giorno o disponibilità. Gli appuntamenti occupati mostrano i dati minimi necessari.",
+      "metrics": [
+        {
+          "label": "Fasce giornaliere",
+          "value": "18"
+        },
+        {
+          "label": "Durata fascia",
+          "value": "20 min"
+        },
+        {
+          "label": "Giorni visualizzati",
+          "value": "5"
+        }
+      ],
+      "columns": [
+        "Giorno",
+        "Orario",
+        "Disponibilità",
+        "Cognome",
+        "Nome",
+        "Stato"
+      ],
+      "rows": [
+        [
+          "Lunedì",
+          "09:00",
+          "Occupato",
+          "Lumo",
+          "Vela",
+          "Prenotato"
+        ],
+        [
+          "Lunedì",
+          "09:20",
+          "Occupato",
+          "Nubi",
+          "Riva",
+          "Presentato"
+        ],
+        [
+          "Lunedì",
+          "09:40",
+          "Libero",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Lunedì",
+          "10:00",
+          "Libero",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Martedì",
+          "09:00",
+          "Libero",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Martedì",
+          "09:20",
+          "Occupato",
+          "Mira",
+          "Sole",
+          "Prenotato"
+        ],
+        [
+          "Martedì",
+          "09:40",
+          "Libero",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Martedì",
+          "10:00",
+          "Libero",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Mercoledì",
+          "11:20",
+          "Occupato",
+          "Timo",
+          "Luce",
+          "Assente"
+        ],
+        [
+          "Mercoledì",
+          "11:40",
+          "Libero",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Mercoledì",
+          "12:00",
+          "Libero",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Giovedì",
+          "09:00",
+          "Libero",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Giovedì",
+          "09:20",
+          "Libero",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Giovedì",
+          "09:40",
+          "Occupato",
+          "Duna",
+          "Nilo",
+          "Prenotato"
+        ],
+        [
+          "Venerdì",
+          "14:00",
+          "Occupato",
+          "Duna",
+          "Nilo",
+          "Prenotato"
+        ],
+        [
+          "Venerdì",
+          "14:20",
+          "Libero",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Venerdì",
+          "14:40",
+          "Libero",
+          "—",
+          "—",
+          "—"
+        ],
+        [
+          "Venerdì",
+          "15:00",
+          "Libero",
+          "—",
+          "—",
+          "—"
+        ]
+      ],
+      "form": []
+    },
+    {
+      "id": "appuntamenti-del-giorno",
+      "title": "Appuntamenti del giorno",
+      "description": "Elenco filtrabile per orario, cognome e stato. Aggiorna lo stato operativo di ogni prenotazione.",
+      "metrics": [
+        {
+          "label": "Appuntamenti oggi",
+          "value": "5"
+        },
+        {
+          "label": "Prenotati",
+          "value": "2"
+        },
+        {
+          "label": "Presentati",
+          "value": "2"
+        },
+        {
+          "label": "Assenti",
+          "value": "1"
+        }
+      ],
+      "columns": [
+        "Orario",
+        "Cognome",
+        "Nome",
+        "Motivo",
+        "Stato"
+      ],
+      "rows": [
+        [
+          "09:00",
+          "Lumo",
+          "Vela",
+          "Rilascio carta d’identità",
+          "Prenotato"
+        ],
+        [
+          "09:20",
+          "Nubi",
+          "Riva",
+          "Rinnovo carta d’identità",
+          "Presentato"
+        ],
+        [
+          "09:40",
+          "Mira",
+          "Sole",
+          "Rilascio carta d’identità",
+          "Presentato"
+        ],
+        [
+          "10:00",
+          "Timo",
+          "Luce",
+          "Rinnovo carta d’identità",
+          "Assente"
+        ],
+        [
+          "10:20",
+          "Duna",
+          "Nilo",
+          "Rilascio carta d’identità",
+          "Prenotato"
+        ]
+      ],
+      "form": []
+    },
+    {
+      "id": "nuova-prenotazione",
+      "title": "Nuova prenotazione",
+      "description": "Registra una prenotazione scegliendo una fascia libera. Il telefono non viene raccolto; usa invece una nota breve solo se utile alla gestione dello sportello.",
+      "metrics": [
+        {
+          "label": "Fasce libere oggi",
+          "value": "13"
+        }
+      ],
+      "columns": [
+        "Cognome",
+        "Nome",
+        "Motivo",
+        "Giorno",
+        "Orario",
+        "Nota"
+      ],
+      "rows": [
+        [
+          "—",
+          "—",
+          "—",
+          "—",
+          "—",
+          "—"
+        ]
+      ],
+      "form": [
+        "Cognome",
+        "Nome",
+        "Motivo",
+        "Giorno",
+        "Orario",
+        "Nota"
+      ]
+    }
+  ],
+  "theme": {
+    "palette": "blu-notte",
+    "fonts": "istituzionale"
+  },
+  "custom": [
+    {
+      "name": "AnteprimaTema",
+      "title": "Anteprima modalità chiara e scura",
+      "description": "Selettore interattivo con anteprima locale, senza modificare il tema del template.",
+      "role": "section",
+      "position": "top"
+    }
+  ]
+}
